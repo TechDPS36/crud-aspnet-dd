@@ -3,8 +3,12 @@ Exemplo de CRUD em ASP.NET Core com BD SQLite, para instrumentação com Datadog
 Na pasta 
 /datadog-crud/src/DatadogCrud.Api
 
-executar 
-dotnet run 
+executar:
+
+```bash
+dotnet run
+```
+
 O crud estará rodando na porta 5011 do seu localhost em um swagger:
 
 http://localhost:5011/swagger/index.html
