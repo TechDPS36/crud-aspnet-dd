@@ -1,0 +1,1617 @@
+2025-10-20 21:57:30.107 -03:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-10-20 21:57:30.153 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-20 21:57:30.161 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-10-20 21:57:30.170 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsLock" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK___EFMigrationsLock" PRIMARY KEY,
+    "Timestamp" TEXT NOT NULL
+);
+2025-10-20 21:57:30.175 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-10-21 00:57:30.1712238+00:00');
+SELECT changes();
+2025-10-20 21:57:30.229 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-10-20 21:57:30.241 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-10-20 21:57:30.245 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-20 21:57:30.256 -03:00 [INF] Applying migration '20251021005707_InitialCreate'.
+2025-10-20 21:57:30.263 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Items" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Items" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Description" TEXT NOT NULL
+);
+2025-10-20 21:57:30.264 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20251021005707_InitialCreate', '9.0.10');
+2025-10-20 21:57:30.272 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-10-20 21:57:42.215 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-20 21:57:42.291 -03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-10-20 21:57:42.306 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-10-21 00:57:42.2974998+00:00');
+SELECT changes();
+2025-10-20 21:57:42.363 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-10-20 21:57:42.369 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-10-20 21:57:42.372 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-20 21:57:42.379 -03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-20 21:57:42.384 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-10-20 21:57:42.529 -03:00 [INF] Now listening on: http://localhost:5011
+2025-10-20 21:57:42.533 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 21:57:42.534 -03:00 [INF] Hosting environment: Development
+2025-10-20 21:57:42.534 -03:00 [INF] Content root path: /home/danilosilva/projects/datadog-crud/src/DatadogCrud.Api
+2025-10-20 21:57:51.869 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:57:51.918 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 50.7721ms
+2025-10-20 21:57:51.921 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:58:15.290 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:58:15.294 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 4.4252ms
+2025-10-20 21:58:15.296 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:58:16.120 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:58:16.122 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 2.5204ms
+2025-10-20 21:58:16.123 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:58:16.416 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:58:16.417 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 1.1017ms
+2025-10-20 21:58:16.418 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:58:16.606 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:58:16.606 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 0.9216ms
+2025-10-20 21:58:16.607 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:58:16.835 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:58:16.836 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 1.1025ms
+2025-10-20 21:58:16.837 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:58:23.269 -03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5011/ - null null
+2025-10-20 21:58:23.270 -03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5011/ - 404 0 null 1.162ms
+2025-10-20 21:58:23.271 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5011/, Response status code: 404
+2025-10-20 21:59:04.102 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger - null null
+2025-10-20 21:59:04.105 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger - 301 0 null 2.8572ms
+2025-10-20 21:59:04.112 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 21:59:04.217 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 105.2439ms
+2025-10-20 21:59:04.242 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/swagger-ui.css - null null
+2025-10-20 21:59:04.250 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/swagger-ui-bundle.js - null null
+2025-10-20 21:59:04.254 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-20 21:59:04.277 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-10-20 21:59:04.277 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-10-20 21:59:04.277 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-10-20 21:59:04.282 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 27.5452ms
+2025-10-20 21:59:04.282 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/swagger-ui.css - 200 152034 text/css 39.3957ms
+2025-10-20 21:59:04.282 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 31.9931ms
+2025-10-20 21:59:04.475 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 21:59:40.427 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/favicon-32x32.png - null null
+2025-10-20 21:59:40.428 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-10-20 21:59:40.428 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/favicon-32x32.png - 200 628 image/png 1.5637ms
+2025-10-20 21:59:40.478 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.6705ms
+2025-10-20 22:00:33.622 -03:00 [INF] Application is shutting down...
+2025-10-20 22:07:28.803 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-20 22:07:28.897 -03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-10-20 22:07:28.916 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-10-21 01:07:28.9031173+00:00');
+SELECT changes();
+2025-10-20 22:07:28.984 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-10-20 22:07:28.989 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-10-20 22:07:28.992 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-20 22:07:28.999 -03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-20 22:07:29.003 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-10-20 22:07:29.135 -03:00 [INF] Now listening on: http://localhost:5011
+2025-10-20 22:07:29.138 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 22:07:29.139 -03:00 [INF] Hosting environment: Development
+2025-10-20 22:07:29.139 -03:00 [INF] Content root path: /home/danilosilva/projects/datadog-crud/src/DatadogCrud.Api
+2025-10-20 22:08:08.760 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:08:08.871 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 113.2306ms
+2025-10-20 22:08:09.032 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:08:09.110 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.4881ms
+2025-10-20 22:08:09.975 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:08:09.978 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 2.9ms
+2025-10-20 22:08:10.070 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:08:10.075 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.3275ms
+2025-10-20 22:08:21.514 -03:00 [INF] Application is shutting down...
+2025-10-20 22:16:59.058 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-20 22:16:59.202 -03:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-10-20 22:16:59.221 -03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-10-21 01:16:59.2085914+00:00');
+SELECT changes();
+2025-10-20 22:16:59.287 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-10-20 22:16:59.295 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-10-20 22:16:59.299 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-20 22:16:59.309 -03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-20 22:16:59.314 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-10-20 22:16:59.498 -03:00 [INF] Now listening on: http://localhost:5011
+2025-10-20 22:16:59.504 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 22:16:59.505 -03:00 [INF] Hosting environment: Development
+2025-10-20 22:16:59.506 -03:00 [INF] Content root path: /home/danilosilva/projects/datadog-crud/src/DatadogCrud.Api
+2025-10-20 22:17:05.913 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:17:06.029 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 117.4094ms
+2025-10-20 22:17:06.117 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:17:06.221 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.7429ms
+2025-10-20 22:25:45.750 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:25:45.753 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 3.4114ms
+2025-10-20 22:25:45.902 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:25:45.907 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.3418ms
+2025-10-20 22:25:27.250 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 22:25:27.277 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:25:27.306 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:25:27.314 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:25:27.533 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:25:27.546 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 211.5268ms.
+2025-10-20 22:25:27.555 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:25:27.596 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 268.3571ms
+2025-10-20 22:25:27.597 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:25:27.602 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 334.2855ms
+2025-10-20 22:25:43.482 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 22:25:43.484 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:25:43.484 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:25:43.487 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:25:43.527 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:25:43.528 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39.7495ms.
+2025-10-20 22:25:43.528 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:25:43.529 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 44.3855ms
+2025-10-20 22:25:43.530 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:25:43.530 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 47.9346ms
+2025-10-20 22:26:06.933 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/Items - application/json 60
+2025-10-20 22:26:06.935 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:26:06.944 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:26:06.984 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:26:07.085 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:26:07.112 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 127.8109ms.
+2025-10-20 22:26:07.112 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:26:07.133 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 188.1332ms
+2025-10-20 22:26:07.133 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:26:07.134 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/Items - 201 null application/json; charset=utf-8 200.2395ms
+2025-10-20 22:26:35.966 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items/1 - null null
+2025-10-20 22:26:35.969 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:26:35.975 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:26:35.977 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:26:36.097 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:26:36.100 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 121.8001ms.
+2025-10-20 22:26:36.100 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:26:36.101 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 125.7611ms
+2025-10-20 22:26:36.101 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:26:36.102 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items/1 - 200 null application/json; charset=utf-8 135.9245ms
+2025-10-20 22:27:42.182 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5011/api/Items/1 - application/json 62
+2025-10-20 22:27:42.183 -03:00 [INF] Executing endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 22:27:42.187 -03:00 [INF] Route matched with {action = "Update", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:27:42.191 -03:00 [INF] Executing action method ItemsController.Update (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:27:42.195 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:27:42.199 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Items" SET "Description" = @p0
+WHERE "Id" = @p1
+RETURNING 1;
+2025-10-20 22:27:42.207 -03:00 [INF] Executed action method ItemsController.Update (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 15.5006ms.
+2025-10-20 22:27:42.209 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-10-20 22:27:42.210 -03:00 [INF] Executed action ItemsController.Update (DatadogCrud.Api) in 21.8108ms
+2025-10-20 22:27:42.210 -03:00 [INF] Executed endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 22:27:42.211 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5011/api/Items/1 - 204 null null 29.0577ms
+2025-10-20 22:32:34.628 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:32:34.629 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.093ms
+2025-10-20 22:32:34.790 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:32:34.795 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.0361ms
+2025-10-20 22:35:07.427 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 38
+2025-10-20 22:35:07.428 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:35:07.429 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:35:07.430 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:35:07.435 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:35:07.442 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 12.1337ms.
+2025-10-20 22:35:07.443 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:35:07.444 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 14.3448ms
+2025-10-20 22:35:07.444 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:35:07.444 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 17.1963ms
+2025-10-20 22:35:14.371 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:35:14.371 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:35:14.372 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:35:14.373 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:35:14.374 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:35:14.375 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.3739ms.
+2025-10-20 22:35:14.376 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:35:14.377 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.3448ms
+2025-10-20 22:35:14.377 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:35:14.377 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 6.696ms
+2025-10-20 22:35:32.030 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/1 - null null
+2025-10-20 22:35:32.031 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:35:32.031 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:35:32.032 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:35:32.033 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:35:32.034 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.8856ms.
+2025-10-20 22:35:32.035 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:35:32.035 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.9704ms
+2025-10-20 22:35:32.036 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:35:32.036 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/1 - 200 null application/json; charset=utf-8 6.1885ms
+2025-10-20 22:35:40.502 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5011/api/items/1 - application/json 59
+2025-10-20 22:35:40.503 -03:00 [INF] Executing endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 22:35:40.503 -03:00 [INF] Route matched with {action = "Update", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:35:40.505 -03:00 [INF] Executing action method ItemsController.Update (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:35:40.507 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:35:40.508 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 10), @p1='?' (Size = 12)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Items" SET "Description" = @p0, "Name" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-10-20 22:35:40.518 -03:00 [INF] Executed action method ItemsController.Update (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 12.8298ms.
+2025-10-20 22:35:40.518 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-10-20 22:35:40.519 -03:00 [INF] Executed action ItemsController.Update (DatadogCrud.Api) in 15.1271ms
+2025-10-20 22:35:40.519 -03:00 [INF] Executed endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 22:35:40.519 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5011/api/items/1 - 204 null null 17.3422ms
+2025-10-20 22:36:19.386 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/1 - null null
+2025-10-20 22:36:19.387 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:36:19.387 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:36:19.388 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:36:19.390 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:36:19.391 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.1683ms.
+2025-10-20 22:36:19.391 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:36:19.391 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.7952ms
+2025-10-20 22:36:19.392 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:36:19.392 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/1 - 200 null application/json; charset=utf-8 6.1992ms
+2025-10-20 22:36:26.862 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:36:26.863 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:36:26.867 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:36:26.868 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:36:26.870 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:36:26.876 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Items"
+WHERE "Id" = @p0
+RETURNING 1;
+2025-10-20 22:36:26.883 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 15.1675ms.
+2025-10-20 22:36:26.884 -03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-10-20 22:36:26.884 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 16.6456ms
+2025-10-20 22:36:26.884 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:36:26.884 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 204 null null 22.2195ms
+2025-10-20 22:36:37.013 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:36:37.014 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:36:37.015 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:36:37.015 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:36:37.017 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:36:37.018 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.7573ms.
+2025-10-20 22:36:37.018 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:36:37.019 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.3983ms
+2025-10-20 22:36:37.019 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:36:37.020 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 6.4417ms
+2025-10-20 22:36:09.072 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:36:09.073 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:36:09.074 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:36:09.074 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:36:09.076 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:36:09.076 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.594ms.
+2025-10-20 22:36:09.077 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:36:09.077 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.8028ms
+2025-10-20 22:36:09.077 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:36:09.078 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.1837ms
+2025-10-20 22:37:57.343 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:37:57.345 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.3708ms
+2025-10-20 22:37:57.509 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:37:57.513 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.4494ms
+2025-10-20 22:37:58.251 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:37:58.253 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.3443ms
+2025-10-20 22:37:58.339 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:37:58.342 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.0984ms
+2025-10-20 22:37:58.490 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:37:58.491 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.0225ms
+2025-10-20 22:37:58.535 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:37:58.538 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 2.9117ms
+2025-10-20 22:38:34.635 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:38:34.636 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 0.9437ms
+2025-10-20 22:38:34.695 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:38:34.698 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 2.7475ms
+2025-10-20 22:37:58.972 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:37:58.973 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.0646ms
+2025-10-20 22:37:59.021 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:37:59.023 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 2.3525ms
+2025-10-20 22:37:59.200 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 22:37:59.201 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.2826ms
+2025-10-20 22:37:59.267 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 22:37:59.270 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 2.6071ms
+2025-10-20 22:38:15.494 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 22:38:15.495 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:38:15.495 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:38:15.496 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:38:15.498 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:38:15.499 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.4451ms.
+2025-10-20 22:38:15.500 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:38:15.500 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.5231ms
+2025-10-20 22:38:15.501 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:38:15.501 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 7.6805ms
+2025-10-20 22:38:20.003 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 22:38:20.004 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:38:20.005 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:38:20.006 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:38:20.007 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:38:20.008 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.4621ms.
+2025-10-20 22:38:20.009 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:38:20.009 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.3243ms
+2025-10-20 22:38:20.010 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:38:20.010 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 7.2651ms
+2025-10-20 22:38:22.121 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 22:38:22.122 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:38:22.122 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:38:22.123 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:38:22.125 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:38:22.126 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.4893ms.
+2025-10-20 22:38:22.127 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:38:22.127 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.6299ms
+2025-10-20 22:38:22.128 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:38:22.128 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 6.9467ms
+2025-10-20 22:39:52.141 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:52.142 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:52.142 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:52.143 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:52.145 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:52.146 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.2706ms.
+2025-10-20 22:39:52.146 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:52.147 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.2266ms
+2025-10-20 22:39:52.147 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:52.147 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 6.228ms
+2025-10-20 22:39:53.170 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:53.171 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:53.171 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:53.172 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:53.173 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:53.174 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4645ms.
+2025-10-20 22:39:53.174 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:53.174 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.659ms
+2025-10-20 22:39:53.175 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:53.175 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.4845ms
+2025-10-20 22:39:54.208 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:54.209 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:54.209 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:54.210 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:54.211 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:54.212 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6508ms.
+2025-10-20 22:39:54.212 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:54.213 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.4248ms
+2025-10-20 22:39:54.213 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:54.214 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.4071ms
+2025-10-20 22:39:55.231 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:55.231 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:55.232 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:55.232 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:55.233 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:55.234 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4464ms.
+2025-10-20 22:39:55.234 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:55.235 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.858ms
+2025-10-20 22:39:55.235 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:55.235 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.7096ms
+2025-10-20 22:39:56.254 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:56.255 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:56.256 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:56.256 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:56.258 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:56.260 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.702ms.
+2025-10-20 22:39:56.261 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:56.261 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 5.0177ms
+2025-10-20 22:39:56.261 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:56.262 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 7.8513ms
+2025-10-20 22:39:57.280 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:57.281 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:57.281 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:57.282 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:57.283 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:57.283 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.1234ms.
+2025-10-20 22:39:57.283 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:57.284 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.4744ms
+2025-10-20 22:39:57.284 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:57.284 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 3.9646ms
+2025-10-20 22:39:58.304 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:58.305 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:58.305 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:58.306 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:58.307 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:58.307 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3108ms.
+2025-10-20 22:39:58.308 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:58.308 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.5512ms
+2025-10-20 22:39:58.308 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:58.309 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.7564ms
+2025-10-20 22:39:59.301 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:39:59.301 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:59.302 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:39:59.302 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:39:59.304 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:39:59.304 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4973ms.
+2025-10-20 22:39:59.304 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:39:59.305 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.7078ms
+2025-10-20 22:39:59.305 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:39:59.305 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.4794ms
+2025-10-20 22:40:00.324 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:00.325 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:00.325 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:00.326 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:00.327 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:00.327 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4555ms.
+2025-10-20 22:40:00.328 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:00.328 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.9346ms
+2025-10-20 22:40:00.329 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:00.329 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.2256ms
+2025-10-20 22:40:01.349 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:01.349 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:01.350 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:01.351 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:01.352 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:01.353 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.891ms.
+2025-10-20 22:40:01.353 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:01.354 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.3984ms
+2025-10-20 22:40:01.354 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:01.355 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.8655ms
+2025-10-20 22:40:02.376 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:02.377 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:02.378 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:02.379 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:02.382 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:02.382 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.1181ms.
+2025-10-20 22:40:02.382 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:02.383 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.9991ms
+2025-10-20 22:40:02.383 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:02.384 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 8.1741ms
+2025-10-20 22:40:03.402 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:03.402 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:03.403 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:03.403 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:03.405 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:03.405 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.5491ms.
+2025-10-20 22:40:03.406 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:03.406 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.8961ms
+2025-10-20 22:40:03.406 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:03.407 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.9673ms
+2025-10-20 22:40:04.425 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:04.425 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:04.426 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:04.427 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:04.428 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:04.429 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.8185ms.
+2025-10-20 22:40:04.430 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:04.430 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.7176ms
+2025-10-20 22:40:04.430 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:04.431 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 6.1179ms
+2025-10-20 22:40:05.450 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:05.450 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:05.451 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:05.452 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:05.453 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:05.455 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.0099ms.
+2025-10-20 22:40:05.455 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:05.456 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.924ms
+2025-10-20 22:40:05.456 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:05.457 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 7.1568ms
+2025-10-20 22:40:06.475 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:06.476 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:06.477 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:06.477 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:06.479 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:06.480 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.2088ms.
+2025-10-20 22:40:06.480 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:06.481 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.7173ms
+2025-10-20 22:40:06.481 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:06.482 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 6.5879ms
+2025-10-20 22:40:07.503 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:07.503 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:07.504 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:07.505 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:07.506 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:07.507 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.7028ms.
+2025-10-20 22:40:07.508 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:07.508 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.4074ms
+2025-10-20 22:40:07.509 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:07.509 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 6.3327ms
+2025-10-20 22:40:08.528 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:08.529 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:08.529 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:08.529 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:08.531 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:08.531 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6461ms.
+2025-10-20 22:40:08.532 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:08.532 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.8981ms
+2025-10-20 22:40:08.532 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:08.533 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.5272ms
+2025-10-20 22:40:09.591 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:09.594 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:09.595 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:09.599 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:09.601 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:09.602 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.9589ms.
+2025-10-20 22:40:09.602 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:09.602 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 4.3242ms
+2025-10-20 22:40:09.603 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:09.603 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 11.3936ms
+2025-10-20 22:40:10.636 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:10.637 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:10.637 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:10.638 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:10.639 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:10.640 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6026ms.
+2025-10-20 22:40:10.640 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:10.641 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.0875ms
+2025-10-20 22:40:10.641 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:10.641 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.3072ms
+2025-10-20 22:40:11.658 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:11.658 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:11.659 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:11.659 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:11.660 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:11.661 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.2317ms.
+2025-10-20 22:40:11.661 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:11.661 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.3368ms
+2025-10-20 22:40:11.662 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:11.662 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.3468ms
+2025-10-20 22:40:12.681 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:12.681 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:12.682 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:12.682 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:12.683 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:12.684 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.2944ms.
+2025-10-20 22:40:12.684 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:12.684 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.5371ms
+2025-10-20 22:40:12.685 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:12.685 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.3079ms
+2025-10-20 22:40:13.703 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:13.703 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:13.703 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:13.704 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:13.706 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:13.706 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.907ms.
+2025-10-20 22:40:13.707 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:13.707 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.5221ms
+2025-10-20 22:40:13.708 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:13.708 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.4226ms
+2025-10-20 22:40:14.728 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:14.729 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:14.729 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:14.730 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:14.731 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:14.732 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.29ms.
+2025-10-20 22:40:14.732 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:14.732 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.6401ms
+2025-10-20 22:40:14.733 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:14.733 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.9452ms
+2025-10-20 22:40:15.751 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:15.752 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:15.752 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:15.753 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:15.754 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:15.754 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.1196ms.
+2025-10-20 22:40:15.755 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:15.755 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.4137ms
+2025-10-20 22:40:15.755 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:15.756 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.0918ms
+2025-10-20 22:40:16.775 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:16.775 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:16.776 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:16.776 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:16.777 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:16.778 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6684ms.
+2025-10-20 22:40:16.779 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:16.779 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.0648ms
+2025-10-20 22:40:16.780 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:16.780 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.3163ms
+2025-10-20 22:40:17.797 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:17.798 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:17.799 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:17.800 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:17.801 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:17.801 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3707ms.
+2025-10-20 22:40:17.802 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:17.802 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.9289ms
+2025-10-20 22:40:17.803 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:17.803 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.9146ms
+2025-10-20 22:40:18.822 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:18.822 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:18.823 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:18.823 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:18.824 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:18.825 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.0373ms.
+2025-10-20 22:40:18.825 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:18.825 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.0485ms
+2025-10-20 22:40:18.825 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:18.826 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.1139ms
+2025-10-20 22:40:26.517 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:40:26.518 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:40:26.518 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:26.519 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:26.521 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:40:26.521 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.8831ms.
+2025-10-20 22:40:26.522 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:40:26.522 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.4635ms
+2025-10-20 22:40:26.522 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:40:26.523 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 5.8655ms
+2025-10-20 22:40:29.481 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:40:29.482 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:40:29.482 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:29.483 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:29.484 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:40:29.485 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.9399ms.
+2025-10-20 22:40:29.486 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:40:29.486 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.8551ms
+2025-10-20 22:40:29.486 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:40:29.487 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 5.7425ms
+2025-10-20 22:40:34.116 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:40:34.117 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:40:34.117 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:34.118 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:34.119 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:40:34.120 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.7512ms.
+2025-10-20 22:40:34.120 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:40:34.121 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.8551ms
+2025-10-20 22:40:34.121 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:40:34.122 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 6.2653ms
+2025-10-20 22:40:39.351 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:39.352 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:39.352 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:39.353 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:39.354 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:39.355 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.9612ms.
+2025-10-20 22:40:39.356 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:39.356 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 3.3004ms
+2025-10-20 22:40:39.356 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:39.357 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 5.3484ms
+2025-10-20 22:40:40.376 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:40:40.377 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:40.377 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:40.378 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:40.379 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:40:40.380 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3773ms.
+2025-10-20 22:40:40.380 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:40:40.380 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.5524ms
+2025-10-20 22:40:40.381 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:40:40.381 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.5722ms
+2025-10-20 22:40:45.636 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:40:45.637 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:40:45.637 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:45.638 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:45.639 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:40:45.640 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.7743ms.
+2025-10-20 22:40:45.642 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:40:45.657 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 19.2545ms
+2025-10-20 22:40:45.657 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:40:45.657 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 21.1023ms
+2025-10-20 22:41:34.902 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:41:34.903 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:34.903 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:34.904 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:34.905 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:34.906 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.9032ms.
+2025-10-20 22:41:34.907 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:41:34.907 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 3.8802ms
+2025-10-20 22:41:34.908 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:34.908 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 6.3411ms
+2025-10-20 22:40:59.711 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:40:59.712 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:40:59.712 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:40:59.713 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:40:59.714 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:40:59.715 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.3836ms.
+2025-10-20 22:40:59.715 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:40:59.715 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 2.9099ms
+2025-10-20 22:40:59.715 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:40:59.716 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 4.482ms
+2025-10-20 22:41:00.220 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:41:00.221 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:00.221 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:00.221 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:00.223 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:00.223 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.3912ms.
+2025-10-20 22:41:00.223 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:41:00.224 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 2.8634ms
+2025-10-20 22:41:00.224 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:00.225 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 5.1514ms
+2025-10-20 22:41:00.611 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:41:00.612 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:00.612 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:00.613 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:00.615 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:00.615 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.8548ms.
+2025-10-20 22:41:00.616 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:41:00.616 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 3.0687ms
+2025-10-20 22:41:00.616 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:00.616 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 5.0911ms
+2025-10-20 22:41:01.040 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:41:01.040 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:01.041 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:01.041 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:01.043 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:01.043 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.9196ms.
+2025-10-20 22:41:01.044 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:41:01.044 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 3.2633ms
+2025-10-20 22:41:01.044 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:01.045 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 5.2253ms
+2025-10-20 22:41:01.447 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:41:01.447 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:01.448 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:01.448 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:01.450 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:01.450 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.4778ms.
+2025-10-20 22:41:01.450 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:41:01.450 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 2.7566ms
+2025-10-20 22:41:01.451 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:01.451 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 4.0144ms
+2025-10-20 22:41:01.933 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/items/1 - null null
+2025-10-20 22:41:01.933 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:01.934 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:01.935 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:01.936 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:01.936 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.2857ms.
+2025-10-20 22:41:01.936 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:41:01.937 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 2.664ms
+2025-10-20 22:41:01.937 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 22:41:01.937 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 4.5289ms
+2025-10-20 22:41:25.137 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:41:25.138 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:25.138 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:25.139 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:25.140 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:25.141 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.5698ms.
+2025-10-20 22:41:25.141 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:41:25.142 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.0125ms
+2025-10-20 22:41:25.142 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:25.142 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 4.9814ms
+2025-10-20 22:41:26.091 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:41:26.092 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:26.092 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:26.093 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:26.094 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:26.095 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.194ms.
+2025-10-20 22:41:26.095 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:41:26.096 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.5427ms
+2025-10-20 22:41:26.096 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:26.097 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 6.0625ms
+2025-10-20 22:41:26.708 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:41:26.709 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:26.709 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:26.710 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:26.711 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:26.712 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.5751ms.
+2025-10-20 22:41:26.712 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:41:26.712 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.1241ms
+2025-10-20 22:41:26.713 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:26.713 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 5.1272ms
+2025-10-20 22:41:27.260 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/2 - null null
+2025-10-20 22:41:27.260 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:27.261 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:27.262 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:27.263 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:41:27.264 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.9665ms.
+2025-10-20 22:41:27.264 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:41:27.265 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.5705ms
+2025-10-20 22:41:27.265 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:41:27.266 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/2 - 200 null application/json; charset=utf-8 6.0443ms
+2025-10-20 22:41:59.347 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 38
+2025-10-20 22:41:59.348 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:41:59.349 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:41:59.350 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:41:59.352 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:41:59.357 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 6.9011ms.
+2025-10-20 22:41:59.358 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:41:59.359 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 10.0193ms
+2025-10-20 22:41:59.359 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:41:59.360 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 12.813ms
+2025-10-20 22:42:02.289 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 38
+2025-10-20 22:42:02.290 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:42:02.290 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:42:02.291 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:42:02.292 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:42:02.302 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 10.6994ms.
+2025-10-20 22:42:02.303 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:42:02.304 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 13.1168ms
+2025-10-20 22:42:02.304 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:42:02.304 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 14.7665ms
+2025-10-20 22:42:06.772 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/1 - null null
+2025-10-20 22:42:06.772 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:42:06.773 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:42:06.773 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:42:06.774 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:42:06.775 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.1743ms.
+2025-10-20 22:42:06.775 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:42:06.775 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 2.4756ms
+2025-10-20 22:42:06.776 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:42:06.776 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 4.4798ms
+2025-10-20 22:42:08.057 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/1 - null null
+2025-10-20 22:42:08.058 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:42:08.058 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:42:08.059 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:42:08.060 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:42:08.061 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.3439ms.
+2025-10-20 22:42:08.061 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:42:08.062 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 3.078ms
+2025-10-20 22:42:08.062 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:42:08.062 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 4.9213ms
+2025-10-20 22:42:11.558 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/ - null null
+2025-10-20 22:42:11.559 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:42:11.559 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:42:11.560 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:42:11.561 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:42:11.561 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4885ms.
+2025-10-20 22:42:11.562 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:42:11.562 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.6988ms
+2025-10-20 22:42:11.562 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:42:11.563 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/ - 200 null application/json; charset=utf-8 4.4084ms
+2025-10-20 22:42:15.822 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api// - null null
+2025-10-20 22:42:15.823 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api// - 404 0 null 1.3709ms
+2025-10-20 22:42:15.825 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5011/api//, Response status code: 404
+2025-10-20 22:42:23.535 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/ - null null
+2025-10-20 22:42:23.536 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/ - 404 0 null 0.5511ms
+2025-10-20 22:42:23.536 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5011/, Response status code: 404
+2025-10-20 22:45:00.637 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5011/api/items/1 - application/json 59
+2025-10-20 22:45:00.637 -03:00 [INF] Executing endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 22:45:00.638 -03:00 [INF] Route matched with {action = "Update", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:45:00.639 -03:00 [INF] Executing action method ItemsController.Update (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:45:00.640 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:45:00.641 -03:00 [INF] Executed action method ItemsController.Update (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.2219ms.
+2025-10-20 22:45:00.641 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:45:00.642 -03:00 [INF] Executed action ItemsController.Update (DatadogCrud.Api) in 3.4854ms
+2025-10-20 22:45:00.642 -03:00 [INF] Executed endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 22:45:00.643 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 6.1612ms
+2025-10-20 22:45:07.969 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/1 - null null
+2025-10-20 22:45:07.970 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:45:07.970 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:45:07.972 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:45:07.973 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:45:07.974 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.2711ms.
+2025-10-20 22:45:07.974 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:45:07.975 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 4.2035ms
+2025-10-20 22:45:07.975 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:45:07.976 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 6.12ms
+2025-10-20 22:45:16.139 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/1 - null null
+2025-10-20 22:45:16.140 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:45:16.140 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:45:16.141 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:45:16.142 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 22:45:16.143 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.438ms.
+2025-10-20 22:45:16.143 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 22:45:16.143 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 2.9366ms
+2025-10-20 22:45:16.144 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 22:45:16.144 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/1 - 404 null application/problem+json; charset=utf-8 4.9186ms
+2025-10-20 22:45:23.529 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 22:45:23.530 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:45:23.531 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:45:23.531 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:45:23.532 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:45:23.533 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3531ms.
+2025-10-20 22:45:23.533 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:45:23.533 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.4974ms
+2025-10-20 22:45:23.534 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:45:23.534 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.6567ms
+2025-10-20 22:46:15.447 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 38
+2025-10-20 22:46:15.448 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:46:15.449 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:46:15.450 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:46:15.452 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:46:15.461 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 10.7763ms.
+2025-10-20 22:46:15.462 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:46:15.462 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 12.9175ms
+2025-10-20 22:46:15.463 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:46:15.463 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 15.5283ms
+2025-10-20 22:45:42.187 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 38
+2025-10-20 22:45:42.188 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:45:42.189 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:45:42.190 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:45:42.191 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:45:42.201 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 10.7035ms.
+2025-10-20 22:45:42.201 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:45:42.202 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 12.5243ms
+2025-10-20 22:45:42.202 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:45:42.202 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 14.8472ms
+2025-10-20 22:45:54.017 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:45:54.017 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:45:54.018 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:45:54.020 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:45:54.021 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:45:54.035 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 14.681ms.
+2025-10-20 22:45:54.035 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:45:54.035 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 17.0305ms
+2025-10-20 22:45:54.036 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:45:54.036 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 19.3831ms
+2025-10-20 22:46:02.870 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:46:02.871 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:46:02.871 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:46:02.872 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:46:02.874 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:46:02.882 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 9.9518ms.
+2025-10-20 22:46:02.883 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:46:02.883 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 12.0599ms
+2025-10-20 22:46:02.884 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:46:02.884 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 13.9102ms
+2025-10-20 22:46:58.605 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 38
+2025-10-20 22:46:58.605 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:46:58.606 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:46:58.607 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:46:58.608 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:46:58.617 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 9.3842ms.
+2025-10-20 22:46:58.617 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:46:58.617 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 11.3066ms
+2025-10-20 22:46:58.618 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:46:58.618 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 13.5082ms
+2025-10-20 22:46:41.996 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/ - null null
+2025-10-20 22:46:41.997 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:46:41.997 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:46:41.997 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:46:41.998 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:46:41.999 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4195ms.
+2025-10-20 22:46:42.000 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:46:42.000 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.5723ms
+2025-10-20 22:46:42.000 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:46:42.000 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/ - 200 null application/json; charset=utf-8 3.9611ms
+2025-10-20 22:46:46.229 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items/ - null null
+2025-10-20 22:46:46.230 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:46:46.230 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:46:46.231 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:46:46.232 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 22:46:46.233 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4878ms.
+2025-10-20 22:46:46.233 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 22:46:46.233 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.6962ms
+2025-10-20 22:46:46.234 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 22:46:46.234 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items/ - 200 null application/json; charset=utf-8 4.5448ms
+2025-10-20 22:59:53.426 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:53.427 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:53.427 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:53.429 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:53.433 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:53.441 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 11.815ms.
+2025-10-20 22:59:53.441 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:53.442 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 14.3248ms
+2025-10-20 22:59:53.442 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:53.442 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 16.3663ms
+2025-10-20 22:59:54.459 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:54.460 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:54.460 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:54.461 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:54.463 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:54.472 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 10.0357ms.
+2025-10-20 22:59:54.472 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:54.473 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 12.3386ms
+2025-10-20 22:59:54.473 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:54.473 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 14.5587ms
+2025-10-20 22:59:54.918 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:54.919 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:54.919 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:54.921 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:54.924 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:54.935 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 13.4044ms.
+2025-10-20 22:59:54.935 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:54.936 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 16.0158ms
+2025-10-20 22:59:54.936 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:54.936 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 18.2055ms
+2025-10-20 22:59:55.272 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:55.272 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:55.273 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:55.273 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:55.275 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:55.285 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 11.113ms.
+2025-10-20 22:59:55.285 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:55.286 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 12.879ms
+2025-10-20 22:59:55.286 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:55.286 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 14.4884ms
+2025-10-20 22:59:55.525 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:55.526 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:55.526 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:55.527 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:55.528 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:55.537 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 9.4473ms.
+2025-10-20 22:59:55.537 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:55.537 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 11.0705ms
+2025-10-20 22:59:55.538 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:55.538 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 12.8913ms
+2025-10-20 22:59:55.772 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:55.772 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:55.773 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:55.773 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:55.775 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:55.784 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 10.1362ms.
+2025-10-20 22:59:55.784 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:55.785 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 11.7053ms
+2025-10-20 22:59:55.785 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:55.785 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 13.4653ms
+2025-10-20 23:00:31.939 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 23:00:31.939 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 23:00:31.940 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:00:31.940 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:00:31.942 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 23:00:31.948 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 6.94ms.
+2025-10-20 23:00:31.948 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 23:00:31.949 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 8.5347ms
+2025-10-20 23:00:31.949 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 23:00:31.949 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 10.2938ms
+2025-10-20 22:59:56.245 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:56.246 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.246 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:56.247 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:56.248 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:56.253 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 5.6908ms.
+2025-10-20 22:59:56.254 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:56.254 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 7.3832ms
+2025-10-20 22:59:56.254 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.255 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 9.3451ms
+2025-10-20 22:59:56.445 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:56.446 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.446 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:56.447 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:56.449 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:56.453 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 5.666ms.
+2025-10-20 22:59:56.453 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:56.454 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 7.3459ms
+2025-10-20 22:59:56.454 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.455 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 9.1794ms
+2025-10-20 22:59:56.664 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:56.664 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.664 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:56.665 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:56.667 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:56.671 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 5.7194ms.
+2025-10-20 22:59:56.671 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:56.672 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 7.1546ms
+2025-10-20 22:59:56.672 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.672 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 8.8223ms
+2025-10-20 22:59:56.894 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:56.895 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.895 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:56.896 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:56.897 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:56.902 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 6.2933ms.
+2025-10-20 22:59:56.903 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:56.903 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 7.7964ms
+2025-10-20 22:59:56.904 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:56.904 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 9.7935ms
+2025-10-20 22:59:57.126 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:57.127 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.127 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:57.127 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:57.129 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:57.134 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 6.0968ms.
+2025-10-20 22:59:57.134 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:57.135 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 7.7793ms
+2025-10-20 22:59:57.135 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.135 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 9.3131ms
+2025-10-20 22:59:57.328 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:57.329 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.329 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:57.330 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:57.332 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:57.341 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 10.3332ms.
+2025-10-20 22:59:57.342 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:57.342 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 12.3677ms
+2025-10-20 22:59:57.343 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.343 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 14.4561ms
+2025-10-20 22:59:57.545 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:57.546 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.546 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:57.547 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:57.548 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:57.552 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 5.3674ms.
+2025-10-20 22:59:57.553 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:57.553 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 6.8348ms
+2025-10-20 22:59:57.554 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.554 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 8.6958ms
+2025-10-20 22:59:57.737 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:57.737 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.737 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:57.738 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:57.740 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:57.744 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 5.8469ms.
+2025-10-20 22:59:57.745 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:57.745 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 7.5892ms
+2025-10-20 22:59:57.746 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.746 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 9.0771ms
+2025-10-20 22:59:57.951 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:57.951 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.952 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:57.952 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:57.953 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:57.957 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 4.8932ms.
+2025-10-20 22:59:57.958 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:57.958 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 6.4704ms
+2025-10-20 22:59:57.959 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:57.959 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 8.0675ms
+2025-10-20 22:59:58.170 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:58.170 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:58.170 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:58.171 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:58.172 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:58.181 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 9.8719ms.
+2025-10-20 22:59:58.182 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:58.182 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 11.4817ms
+2025-10-20 22:59:58.182 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:58.183 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 12.9903ms
+2025-10-20 22:59:58.422 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/items - application/json 39
+2025-10-20 22:59:58.423 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:58.423 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 22:59:58.424 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 22:59:58.425 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 5), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 22:59:58.433 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 8.8399ms.
+2025-10-20 22:59:58.434 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 22:59:58.434 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 10.4988ms
+2025-10-20 22:59:58.435 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 22:59:58.435 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/items - 201 null application/json; charset=utf-8 12.9625ms
+2025-10-20 23:00:06.667 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/items - null null
+2025-10-20 23:00:06.668 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 23:00:06.668 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:00:06.669 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:00:06.670 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 23:00:06.671 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6321ms.
+2025-10-20 23:00:06.671 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 23:00:06.671 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 2.8357ms
+2025-10-20 23:00:06.672 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 23:00:06.672 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/items - 200 null application/json; charset=utf-8 4.5577ms
+2025-10-20 23:01:11.669 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - null null
+2025-10-20 23:01:11.670 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:11.670 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:01:11.671 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:01:11.672 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:01:11.673 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.4023ms.
+2025-10-20 23:01:11.673 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 23:01:11.674 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 2.8845ms
+2025-10-20 23:01:11.674 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:11.674 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - 404 null application/problem+json; charset=utf-8 4.5573ms
+2025-10-20 23:01:18.323 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - null null
+2025-10-20 23:01:18.324 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:18.324 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:01:18.324 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:01:18.326 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:01:18.326 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.6632ms.
+2025-10-20 23:01:18.327 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 23:01:18.327 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 2.658ms
+2025-10-20 23:01:18.327 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:18.327 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - 404 null application/problem+json; charset=utf-8 4.1399ms
+2025-10-20 23:01:20.736 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - null null
+2025-10-20 23:01:20.737 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:20.737 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:01:20.738 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:01:20.740 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:01:20.740 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.8114ms.
+2025-10-20 23:01:20.741 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 23:01:20.741 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 3.6982ms
+2025-10-20 23:01:20.741 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:20.741 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - 404 null application/problem+json; charset=utf-8 5.1628ms
+2025-10-20 23:01:22.691 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - null null
+2025-10-20 23:01:22.692 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:22.692 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:01:22.692 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:01:22.694 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:01:22.694 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.8853ms.
+2025-10-20 23:01:22.695 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 23:01:22.695 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 3.0304ms
+2025-10-20 23:01:22.695 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:22.696 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/Items/1 - 404 null application/problem+json; charset=utf-8 4.4335ms
+2025-10-20 23:01:28.112 -03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5011/api/Items/30 - null null
+2025-10-20 23:01:28.113 -03:00 [INF] Executing endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:28.114 -03:00 [INF] Route matched with {action = "Delete", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:01:28.114 -03:00 [INF] Executing action method ItemsController.Delete (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:01:28.116 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:01:28.116 -03:00 [INF] Executed action method ItemsController.Delete (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 1.9585ms.
+2025-10-20 23:01:28.117 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 23:01:28.118 -03:00 [INF] Executed action ItemsController.Delete (DatadogCrud.Api) in 4.1895ms
+2025-10-20 23:01:28.118 -03:00 [INF] Executed endpoint 'ItemsController.Delete (DatadogCrud.Api)'
+2025-10-20 23:01:28.119 -03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5011/api/Items/30 - 404 null application/problem+json; charset=utf-8 6.418ms
+2025-10-20 23:04:32.577 -03:00 [INF] Application is shutting down...
+2025-10-20 23:07:47.547 -03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-20 23:07:47.636 -03:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-10-20 23:07:47.654 -03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-10-21 02:07:47.6449215+00:00');
+SELECT changes();
+2025-10-20 23:07:47.728 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-10-20 23:07:47.737 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-10-20 23:07:47.741 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-20 23:07:47.748 -03:00 [INF] No migrations were applied. The database is already up to date.
+2025-10-20 23:07:47.751 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-10-20 23:07:11.982 -03:00 [INF] Now listening on: http://localhost:5011
+2025-10-20 23:07:11.984 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-20 23:07:11.985 -03:00 [INF] Hosting environment: Development
+2025-10-20 23:07:11.985 -03:00 [INF] Content root path: /home/danilosilva/projects/datadog-crud/src/DatadogCrud.Api
+2025-10-20 23:07:18.399 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 23:07:18.529 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 131.789ms
+2025-10-20 23:07:18.622 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 23:07:18.705 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.9472ms
+2025-10-20 23:10:09.126 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 23:10:09.153 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 23:10:09.179 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:10:09.189 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:10:09.411 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 23:10:09.464 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 270.8205ms.
+2025-10-20 23:10:09.473 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 23:10:09.511 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 325.6525ms
+2025-10-20 23:10:09.513 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 23:10:09.519 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 392.4505ms
+2025-10-20 23:10:17.891 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items - null null
+2025-10-20 23:10:17.893 -03:00 [INF] Executing endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 23:10:17.894 -03:00 [INF] Route matched with {action = "GetAll", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:10:17.898 -03:00 [INF] Executing action method ItemsController.GetAll (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:10:17.936 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+2025-10-20 23:10:17.937 -03:00 [INF] Executed action method ItemsController.GetAll (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 38.4837ms.
+2025-10-20 23:10:17.938 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatadogCrud.Api.Models.Item, DatadogCrud.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-20 23:10:17.939 -03:00 [INF] Executed action ItemsController.GetAll (DatadogCrud.Api) in 44.4453ms
+2025-10-20 23:10:17.939 -03:00 [INF] Executed endpoint 'ItemsController.GetAll (DatadogCrud.Api)'
+2025-10-20 23:10:17.940 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items - 200 null application/json; charset=utf-8 48.7923ms
+2025-10-20 23:10:31.324 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/Items - application/json 60
+2025-10-20 23:10:31.325 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 23:10:31.335 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:10:31.374 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:10:31.443 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 23:10:31.464 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 89.9331ms.
+2025-10-20 23:10:31.464 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 23:10:31.484 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 148.8986ms
+2025-10-20 23:10:31.485 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 23:10:31.485 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/Items - 201 null application/json; charset=utf-8 161.559ms
+2025-10-20 23:10:33.876 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5011/api/Items - application/json 60
+2025-10-20 23:10:33.877 -03:00 [INF] Executing endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 23:10:33.878 -03:00 [INF] Route matched with {action = "Create", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:10:33.881 -03:00 [INF] Executing action method ItemsController.Create (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:10:33.886 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Items" ("Description", "Name")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-10-20 23:10:33.896 -03:00 [INF] Executed action method ItemsController.Create (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 14.7818ms.
+2025-10-20 23:10:33.897 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 23:10:33.898 -03:00 [INF] Executed action ItemsController.Create (DatadogCrud.Api) in 19.7048ms
+2025-10-20 23:10:33.899 -03:00 [INF] Executed endpoint 'ItemsController.Create (DatadogCrud.Api)'
+2025-10-20 23:10:33.899 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5011/api/Items - 201 null application/json; charset=utf-8 22.8702ms
+2025-10-20 23:11:28.222 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/Items/29 - null null
+2025-10-20 23:11:28.226 -03:00 [INF] Executing endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 23:11:28.230 -03:00 [INF] Route matched with {action = "Get", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:11:28.233 -03:00 [INF] Executing action method ItemsController.Get (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:10:52.375 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:10:52.375 -03:00 [INF] Executed action method ItemsController.Get (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 91.1612ms.
+2025-10-20 23:10:52.376 -03:00 [INF] Executing OkObjectResult, writing value of type 'DatadogCrud.Api.Models.Item'.
+2025-10-20 23:10:52.376 -03:00 [INF] Executed action ItemsController.Get (DatadogCrud.Api) in 95.0019ms
+2025-10-20 23:10:52.377 -03:00 [INF] Executed endpoint 'ItemsController.Get (DatadogCrud.Api)'
+2025-10-20 23:10:52.377 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/Items/29 - 200 null application/json; charset=utf-8 104.1365ms
+2025-10-20 23:11:13.768 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5011/api/Items/00 - application/json 60
+2025-10-20 23:11:13.770 -03:00 [INF] Executing endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 23:11:13.774 -03:00 [INF] Route matched with {action = "Update", controller = "Items"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, DatadogCrud.Api.Models.Item) on controller ItemsController (DatadogCrud.Api).
+2025-10-20 23:11:13.776 -03:00 [INF] Executing action method ItemsController.Update (DatadogCrud.Api) - Validation state: "Valid"
+2025-10-20 23:11:13.781 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."Description", "i"."Name"
+FROM "Items" AS "i"
+WHERE "i"."Id" = @__p_0
+LIMIT 1
+2025-10-20 23:11:13.782 -03:00 [INF] Executed action method ItemsController.Update (DatadogCrud.Api), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 5.8094ms.
+2025-10-20 23:11:13.784 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-10-20 23:11:13.799 -03:00 [INF] Executed action ItemsController.Update (DatadogCrud.Api) in 24.8558ms
+2025-10-20 23:11:13.800 -03:00 [INF] Executed endpoint 'ItemsController.Update (DatadogCrud.Api)'
+2025-10-20 23:11:13.800 -03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5011/api/Items/00 - 404 null application/problem+json; charset=utf-8 32.38ms
+2025-10-20 23:14:48.540 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 23:14:48.549 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.2138ms
+2025-10-20 23:14:12.703 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/favicon.ico - null null
+2025-10-20 23:14:12.705 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/favicon.ico - 404 0 null 2.7398ms
+2025-10-20 23:14:12.708 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5011/favicon.ico, Response status code: 404
+2025-10-20 23:14:53.501 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/index.html - null null
+2025-10-20 23:14:53.502 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/index.html - 200 null text/html;charset=utf-8 1.3105ms
+2025-10-20 23:14:53.573 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - null null
+2025-10-20 23:14:17.638 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 2.8197ms
+2025-10-20 23:14:32.032 -03:00 [INF] Application is shutting down...

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "c+uhizbtMMHMmugpzkdooVq3ELCOmIOqQ0TBd8i1yog=",
+  "Source": "DatadogCrud.Api",
+  "BasePath": "_content/DatadogCrud.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
