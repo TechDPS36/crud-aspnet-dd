@@ -12,8 +12,9 @@ http://localhost:5011/swagger/index.html
 <img width="1215" height="556" alt="image" src="https://github.com/user-attachments/assets/1f6e3039-6d2c-47e3-ad5f-ab6d05f72d94" />
 
 
-Exemplos de utilização via curl:
+## Exemplos de Utilização via cURL
 
+```bash
 curl -X GET "http://localhost:5011/api/items/" | jq
 curl -X POST "http://localhost:5011/api/items" -H "Content-Type: application/json" -d "{\"name\":\"Caneta\",\"description\":\"Verde\"}" | jq
 curl -X PUT "http://localhost:5011/api/items/1" -H "Content-Type: application/json" -d "{\"id\":1, \"name\":\"Caneta Preta\", \"description\":\"Ponta fina\"}" | jq
